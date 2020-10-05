@@ -1,0 +1,11 @@
+[sources.in]
+  address = "0.0.0.0:9000" # required
+  type = "vector" # required
+
+[sinks.out]
+  # Encoding
+  encoding.codec = "json" # required
+
+  # General
+  inputs = ["in"] # required
+  type = "console" # required
