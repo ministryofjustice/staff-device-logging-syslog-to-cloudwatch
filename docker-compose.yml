@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  vector:
+    build: ./docker
+    ports: 
+      - "5002:5002"
+  syslog_client:
+    build: ./syslog_client
+    ports:
+      - "5000:5000"
