@@ -4,7 +4,8 @@ import os
 from flask import Flask
 
 app = Flask(__name__)
-os.mknod('/tmp/server_started')
+if not os.path.exists('/tmp/server_started'):
+    os.mknod('/tmp/server_started')
 
 log = syslog_client.Syslog()
 
