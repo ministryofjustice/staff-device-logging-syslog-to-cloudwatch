@@ -1,0 +1,11 @@
+version: 0.2
+
+env:
+  parameter-store:
+    LOGGING_TERRAFORM_OUTPUTS: "/terraform_logging/$ENV/outputs"
+    ROLE_ARN: "/codebuild/pttp-ci-infrastructure-core-pipeline/$ENV/assume_role"
+
+phases:
+  build:
+    commands:
+      - make publish
