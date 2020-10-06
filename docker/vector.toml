@@ -1,11 +1,12 @@
 [sources.in]
-  address = "0.0.0.0:9000" # required
-  type = "vector" # required
+  address = "0.0.0.0:5002"
+  type = "syslog"
+  mode = "udp"
 
 [sinks.out]
   # Encoding
-  encoding.codec = "json" # required
+  encoding.codec = "json"
 
   # General
-  inputs = ["in"] # required
-  type = "console" # required
+  inputs = ["in"]
+  type = "console"
