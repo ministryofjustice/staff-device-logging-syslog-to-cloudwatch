@@ -9,3 +9,4 @@ phases:
   build:
     commands:
       - make publish
+      - make deploy
