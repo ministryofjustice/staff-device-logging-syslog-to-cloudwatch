@@ -4,3 +4,7 @@ phases:
   install:
     commands:
       - echo noop
+
+  build:
+    commands:
+      - make test
