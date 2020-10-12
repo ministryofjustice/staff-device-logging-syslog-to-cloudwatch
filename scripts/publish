@@ -2,8 +2,10 @@
 
 set -e
 
+tag=$1
+
 repository_url=$( jq -r '.syslog.ecr.repository_url' <<< "${LOGGING_TERRAFORM_OUTPUTS}" )
 
 aws ecr get-login-password | docker login --username AWS --password-stdin ${repository_url}
-docker tag docker_syslog:latest ${repository_url}:latest
-docker push ${repository_url}:latest
+docker tag ${tag}:${tag} ${repository_url}:${tag}
+docker push ${repository_url}:${tag}
