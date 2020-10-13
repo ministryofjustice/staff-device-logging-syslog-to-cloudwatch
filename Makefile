@@ -1,5 +1,5 @@
 build:
-	docker build -t docker_syslog ./docker
+	./scripts/build.sh
 
 deploy:
 	./scripts/deploy.sh

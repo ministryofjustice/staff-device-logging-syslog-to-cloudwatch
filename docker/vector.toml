@@ -3,10 +3,21 @@
   type = "syslog"
   mode = "udp"
 
-[sinks.out]
+[sinks.local]
   # Encoding
   encoding.codec = "json"
 
   # General
   inputs = ["in"]
   type = "console"
+
+[sinks.production]
+  # General
+  type = "aws_cloudwatch_logs"
+  inputs = ["in"]
+  group_name = "<AWS_LOG_GROUP_NAME>"
+  region = "eu-west-1"
+  stream_name = "{{ host }}"
+
+  # Encoding
+  encoding.codec = "json"
