@@ -5,6 +5,7 @@ services:
       context: ./docker 
       args:
         log_group_name: "fakegroupname"
+        config_file: "vector.development.toml"
     ports: 
       - "5002:5002"
   syslog_client:
