@@ -3,14 +3,6 @@
   type = "syslog"
   mode = "udp"
 
-[sinks.local]
-  # Encoding
-  encoding.codec = "json"
-
-  # General
-  inputs = ["in"]
-  type = "console"
-
 [sinks.production]
   # General
   type = "aws_cloudwatch_logs"
