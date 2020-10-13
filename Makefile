@@ -1,8 +1,8 @@
 build:
-	./scripts/build.sh
+	./scripts/build
 
 deploy:
-	./scripts/deploy.sh
+	./scripts/deploy
 
 publish: build
 	./scripts/publish
@@ -10,7 +10,7 @@ publish: build
 test:
 	docker-compose down
 	docker-compose up -d --build
-	./scripts/wait_for_syslog_client.sh
+	./scripts/wait_for_syslog_client
 	curl localhost:5000
 	docker-compose logs vector | grep "local testing message" 
 
