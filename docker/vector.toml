@@ -1,5 +1,5 @@
 [sources.tcp]
-  address = "0.0.0.0:514"
+  address = "0.0.0.0:5140"
   type = "syslog"
   mode = "tcp"
 

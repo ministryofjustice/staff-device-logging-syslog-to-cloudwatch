@@ -12,3 +12,4 @@ RUN sed -i "s/<AWS_LOG_GROUP_NAME>/$LOG_GROUP_NAME/g" /etc/vector/vector.toml
 RUN cat /etc/vector/vector.toml
 
 EXPOSE 514/udp
+EXPOSE 5140/tcp
