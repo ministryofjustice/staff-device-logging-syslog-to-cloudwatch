@@ -1,12 +1,17 @@
-[sources.in]
+[sources.udp]
   address = "0.0.0.0:514"
   type = "syslog"
   mode = "udp"
 
+[sources.tcp]
+  type = "syslog"
+  address = "0.0.0.0:514"
+  mode = "tcp"
+
 [sinks.production]
   # General
   type = "aws_cloudwatch_logs"
-  inputs = ["in"]
+  inputs = ["udp", "tcp"]
   group_name = "<AWS_LOG_GROUP_NAME>"
   region = "eu-west-2"
   stream_name = "{{ host }}"
