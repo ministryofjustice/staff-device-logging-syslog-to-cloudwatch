@@ -3,7 +3,7 @@ FROM timberio/vector:latest-alpine
 ARG log_group_name
 ARG config_file=vector.toml
 ENV LOG_GROUP_NAME=${log_group_name}
-ENV LOG=debug
+ENV LOG=info
 
 COPY ${config_file} /etc/vector/vector.toml
 
