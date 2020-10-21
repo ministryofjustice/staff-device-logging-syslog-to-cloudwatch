@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e, -u, -o pipefail
+set -euo pipefail
 
 log_group_name=$( jq -r '.syslog.logging.syslog_log_group_name' <<< "${LOGGING_TERRAFORM_OUTPUTS}" )
 docker build -t docker_syslog ./docker --build-arg log_group_name=$log_group_name
