@@ -10,7 +10,7 @@
   inputs = ["udp"]
   group_name = "<AWS_LOG_GROUP_NAME>"
   region = "eu-west-2"
-  stream_name = "{{ host }}"
+  stream_name = "{{ severity }}"
 
   # Encoding
   encoding.codec = "json"
