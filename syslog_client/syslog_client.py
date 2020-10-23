@@ -29,7 +29,7 @@ class Syslog:
     """
 
     def __init__(self,
-                 host="vector",
+                 host="syslog_server",
                  port=5002,
                  facility=Facility.DAEMON):
         self.host = host

@@ -2,5 +2,6 @@
 
 set -euo pipefail
 
+LOGGING_TERRAFORM_OUTPUTS='{"syslog": { "logging": { "syslog_log_group_name": "staff-device-em-infra-syslog-log-group" }}}'
 log_group_name=$( jq -r '.syslog.logging.syslog_log_group_name' <<< "${LOGGING_TERRAFORM_OUTPUTS}" )
 docker build -t docker_syslog ./docker --build-arg log_group_name=$log_group_name

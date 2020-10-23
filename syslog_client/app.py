@@ -12,5 +12,5 @@ log = syslog_client.Syslog()
 
 @app.route('/', methods=["GET"])
 def generate_syslog():
-    log.send("local testing message", syslog_client.Level.WARNING)
+    log.send("{\"host\": \"Staff-Device-Syslog-Host\", \"ident\": \"1\", \"message\": \"Hello Syslog\", \"pri\": \"134\"}", syslog_client.Level.WARNING)
     return "Generating log"

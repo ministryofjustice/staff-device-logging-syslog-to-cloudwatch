@@ -1,13 +1,13 @@
 version: "3.8"
 services:
-  vector:
+  syslog_server:
     build:
       context: ./docker
       args:
         log_group_name: "fakegroupname"
-        config_file: "fluent-bit.conf"
+        config_file: "fluent-bit.development.conf"
     ports:
-      - "5002:5002"
+      - "514:514"
   syslog_client:
     build: ./syslog_client
     ports:
