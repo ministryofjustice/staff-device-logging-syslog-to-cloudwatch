@@ -2,11 +2,11 @@ version: "3.8"
 services:
   vector:
     build:
-      context: ./docker 
+      context: ./docker
       args:
         log_group_name: "fakegroupname"
-        config_file: "vector.development.toml"
-    ports: 
+        config_file: "fluent-bit.conf"
+    ports:
       - "5002:5002"
   syslog_client:
     build: ./syslog_client
