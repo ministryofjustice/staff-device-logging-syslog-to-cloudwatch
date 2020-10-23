@@ -30,7 +30,7 @@ class Syslog:
 
     def __init__(self,
                  host="syslog_server",
-                 port=5002,
+                 port=514,
                  facility=Facility.DAEMON):
         self.host = host
         self.port = port
