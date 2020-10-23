@@ -2,7 +2,6 @@
 
 set -e
 
-LOGGING_TERRAFORM_OUTPUTS='{"syslog": { "ecr": { "repository_url": "068084030754.dkr.ecr.eu-west-2.amazonaws.com/staff-device-em-infra-syslog-syslog-docker"}}}'
 repository_url=$( jq -r '.syslog.ecr.repository_url' <<< "${LOGGING_TERRAFORM_OUTPUTS}" )
 
 aws ecr get-login-password | docker login --username AWS --password-stdin ${repository_url}
