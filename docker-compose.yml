@@ -5,7 +5,7 @@ services:
       context: ./docker
       args:
         log_group_name: "fakegroupname"
-        config_file: "fluent-bit.development.conf"
+        config_file: "vector.development.toml"
     ports:
       - "514:514"
   syslog_client:
