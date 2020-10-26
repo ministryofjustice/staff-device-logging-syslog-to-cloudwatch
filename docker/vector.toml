@@ -10,6 +10,7 @@
   group_name = "<AWS_LOG_GROUP_NAME>"
   region = "eu-west-2"
   stream_name = "{{ host }}"
+  max_events = 1
 
  # Encoding
   encoding.codec = "json"
