@@ -1,5 +1,5 @@
 FROM timberio/vector:latest-alpine
-ENV LOG=debug
+ENV LOG=info
 
 ARG log_group_name
 ARG config_file=vector.toml
