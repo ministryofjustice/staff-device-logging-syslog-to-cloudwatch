@@ -11,8 +11,8 @@
   region = "eu-west-2"
   stream_name = "{{ host }}"
   buffer.type = "memory"
-  batch.max_size = 1
-  buffer.max_size = 1
+  buffer.timeout_secs = 2
+
 
  # Encoding
   encoding.codec = "json"
