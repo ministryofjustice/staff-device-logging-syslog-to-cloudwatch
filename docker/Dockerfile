@@ -1,4 +1,5 @@
-FROM timberio/vector:latest-alpine
+FROM timberio/vector:0.19.0-alpine
+
 ENV LOG=info
 
 ARG log_group_name
