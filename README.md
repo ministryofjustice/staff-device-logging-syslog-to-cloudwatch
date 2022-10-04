@@ -20,7 +20,6 @@ Configuring Vector is done in the [vector.toml](./docker/vector.toml) file.
 When running this locally, [vector.development.toml](./docker/vector.development.toml) will be used.
 New features should be created as a pull request in Github.
 
-
 ## Deploying
 
 This application is deployed through AWS CodePipeline. There are 3 environments that this service runs on:
