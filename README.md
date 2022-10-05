@@ -1,3 +1,5 @@
+[![repo standards badge](https://img.shields.io/badge/dynamic/json?color=blue&style=flat&logo=github&labelColor=32393F&label=MoJ%20Compliant&query=%24.result&url=https%3A%2F%2Foperations-engineering-reports.cloud-platform.service.justice.gov.uk%2Fapi%2Fv1%2Fcompliant_public_repositories%2Fstaff-device-logging-syslog-to-cloudwatch)](https://operations-engineering-reports.cloud-platform.service.justice.gov.uk/public-github-repositories.html#staff-device-logging-syslog-to-cloudwatch "Link to report")
+
 # Vector Syslog to CloudWatch
 
 ## Introduction
@@ -17,7 +19,6 @@ Configuring Vector is done in the [vector.toml](./docker/vector.toml) file.
 
 When running this locally, [vector.development.toml](./docker/vector.development.toml) will be used.
 New features should be created as a pull request in Github.
-
 
 ## Deploying
 
