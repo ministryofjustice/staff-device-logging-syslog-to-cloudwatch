@@ -37,3 +37,10 @@ Deploying on CI is a 2 step process:
 2. Create a new zero downtime ECS deployment
 
 More details can be found in [./scripts/deploy](./scripts/deploy)
+
+## CI/CD
+
+- [CI Terraform code - staff-device-logging-syslog-to-cloudwatch](https://github.com/ministryofjustice/staff-device-logging-syslog-to-cloudwatch)
+- Terraform module - module "staff-device-logging-syslog-to-cloudwatch-pipeline"
+- AWS Account - MOJ Official (Shared Services)
+- [Pipeline "Staff-Device-Logging-Syslog-To-Cloudwatch"](https://eu-west-2.console.aws.amazon.com/codesuite/codepipeline/pipelines/Staff-Device-Logging-Syslog-To-Cloudwatch/view?region=eu-west-2)
