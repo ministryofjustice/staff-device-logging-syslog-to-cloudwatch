@@ -8,5 +8,6 @@ env:
 phases:
   build:
     commands:
+      - make build
       - make publish
       - make deploy
